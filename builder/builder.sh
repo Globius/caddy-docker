@@ -2,7 +2,7 @@
 
 VERSION=${VERSION:-"1.0.3"}
 TELEMETRY=${ENABLE_TELEMETRY:-"true"}
-IMPORT="github.com/caddyserver/caddy"
+IMPORT="github.com/Globius/caddy-docker"
 
 # version <1.0.1 needs to use old import path
 new_import=true
@@ -125,7 +125,7 @@ EOF
 
 # caddy source
 stage "fetching caddy source"
-git clone https://github.com/caddyserver/caddy -b "$VERSION" /go/src/$IMPORT \
+git clone https://github.com/Globius/caddy-docker -b "$VERSION" /go/src/$IMPORT \
     && cd /go/src/$IMPORT
 end_stage
 
